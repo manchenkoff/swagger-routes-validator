@@ -12,6 +12,7 @@ iniconfig = "*"
 [packages]
 openapi3-parser = "*"
 pyyaml = "*"
+colorama = "*"
 
 [requires]
 python_version = "3.9"

@@ -1,0 +1,9 @@
+project.some_url.item_get:
+  path: /some/url/{placeholder}
+  defaults: { _controller: project.controller.name }
+  methods: [ GET ]
+
+project.some_url.item_update:
+  path: /some/url/{placeholder}
+  defaults: { _controller: project.controller.name }
+  methods: [ PUT ]

@@ -1,0 +1,57 @@
+openapi: 3.0.0
+
+info:
+  title: 'Some example service'
+  version: 1.0.0
+  description: 'Example service specification'
+  license:
+    name: 'MIT'
+  contact:
+    name: 'manchenkoff'
+    email: 'artyom@manchenkoff.me'
+
+servers:
+  - url: 'https://service.app'
+    description: 'production'
+
+  - url: 'http://stage.service.app'
+    description: 'staging'
+
+  - url: 'http://service.local'
+    description: 'development'
+
+paths:
+  /some/url:
+    get:
+      summary: Operation description
+      operationId: getSomeItem
+      responses:
+        200:
+          description: Successful response
+    post:
+      summary: Operation description
+      operationId: createSomeItem
+      responses:
+        200:
+          description: Successful response
+
+  /some/url/{placeholder}:
+    parameters:
+      - in: path
+        name: placeholder
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Operation description
+      operationId: getExactItem
+      responses:
+        200:
+          description: Successful response
+    put:
+      summary: Operation description
+      operationId: updateExactItem
+      responses:
+        200:
+          description: Successful response
+

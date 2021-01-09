@@ -1,0 +1,4 @@
+project.some_url:
+  path: /some/url
+  defaults: { _controller: project.controller.name }
+  methods: [ GET, POST ]
