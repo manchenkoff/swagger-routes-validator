@@ -11,7 +11,7 @@ def parse_arguments() -> Namespace:
     arg_parser = ArgumentParser(description="Swagger validation parameters")
 
     arg_parser.add_argument('--swagger', type=str, required=True, help='path to OpenAPI file', metavar='file')
-    arg_parser.add_argument('--routes', type=str, required=True, help='path to YAML routes files (separated by comma)',
+    arg_parser.add_argument('--routes', type=str, required=True, help='path to YAML routes files (separated by a comma)',
                             metavar='file1,file2')
 
     return arg_parser.parse_args()

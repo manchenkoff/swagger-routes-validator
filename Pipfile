@@ -7,9 +7,9 @@ verify_ssl = true
 mypy = "*"
 wheel = "*"
 pytest = "*"
-iniconfig = "*"
 
 [packages]
+iniconfig = "*"
 openapi3-parser = "*"
 pyyaml = "*"
 colorama = "*"
