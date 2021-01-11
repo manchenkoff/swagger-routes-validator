@@ -28,14 +28,16 @@ sync: ## Sync with Pipfile packages list
 lint: ## Run code linter
 	@pipenv run mypy ./src
 
+run: ## Run application
+	@pipenv run python -m validator --config=tests/data/config.yml
+
 docker-build: ## Build docker image
 	@docker build . -t manchenkoff/${IMAGE_NAME} -f docker/Dockerfile
 
 docker-run: ## Run application with Docker
 	@docker run \
 		-v ${PROJECT_DIRECTORY}/tests/data:/var/data \
-		-e SWAGGER=/var/data/swagger.yml \
-		-e ROUTES=/var/data/routes1.yml,/var/data/routes2.yml \
+		-e CONFIG=/var/data/config.yml \
 		--name ${IMAGE_NAME} --rm \
 		${DOCKER_REPOSITORY}
 

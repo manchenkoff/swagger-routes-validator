@@ -14,24 +14,22 @@ def get_swagger_routes(specification: Specification) -> List[str]:
     return path_list
 
 
-def get_yaml_routes(data: dict) -> List[str]:
+def get_yaml_routes(data: dict, prefix: str = '') -> List[str]:
     path_list = []
 
     for item, config in data.items():
         for method in config['methods']:
-            path_list.append(f"{method} {config['path']}")
+            path_list.append(f"{method} {prefix}{config['path']}")
 
     return path_list
 
 
-def build_application_routes(files_path: str) -> List[str]:
-    files = files_path.split(',')
-
+def build_application_routes(routes_config: dict) -> List[str]:
     path_list = []
 
-    for file in files:
-        with open(file) as stream:
+    for name, config in routes_config.items():
+        with open(config['path']) as stream:
             data = yaml.safe_load(stream)
-            path_list.extend(get_yaml_routes(data))
+            path_list.extend(get_yaml_routes(data, config.get('prefix', '')))
 
     return path_list

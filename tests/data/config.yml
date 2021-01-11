@@ -1,0 +1,7 @@
+swagger: tests/data/swagger.yml
+
+routes:
+  default:
+    path: tests/data/routes1.yml
+  with_prefix:
+    path: tests/data/routes2.yml

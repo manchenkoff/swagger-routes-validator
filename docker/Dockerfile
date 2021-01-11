@@ -21,7 +21,6 @@ FROM python:3.9-slim as application
 COPY --from=builder /root/.local /root/.local
 
 ENV PATH=/root/.local/bin:$PATH
-ENV SWAGGER=""
-ENV ROUTES=""
+ENV CONFIG=""
 
-CMD swagger-routes-validator --swagger $SWAGGER --routes $ROUTES
+CMD swagger-routes-validator --config $CONFIG
