@@ -79,11 +79,11 @@
         },
         "openapi3-parser": {
             "hashes": [
-                "sha256:04d583b73b36dfdf28c6c51a552877b92576d1bd9813dcb44dae9b5d946f10aa",
-                "sha256:b43850c6686e4cfa08ff7443531e4a18e77dfe503ec71b0a3c94a353e18a41ef"
+                "sha256:9733cfadbb281304839b0e7519f531931b1982917c060d0da611b5e2b49a6e50",
+                "sha256:ec6c1decb3dd282ac7b7850f1d662498cfe6d617a21c4c81dcc71434fb20ca97"
             ],
             "index": "pypi",
-            "version": "==0.0.6"
+            "version": "==0.0.7"
         },
         "prance": {
             "hashes": [
