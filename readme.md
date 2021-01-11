@@ -17,13 +17,13 @@ $ docker run -i \
 Config example
 
 ```yaml
-swagger: tests/data/example/swagger-doc/swagger.yml
+swagger: /var/data/example/swagger-doc/swagger.yml
 
 routes:
   default:
-    path: tests/data/example/routing/v1.yml
+    path: /var/data/example/routing/v1.yml
   with_prefix:
-    path: tests/data/example/routing/v2.yml
+    path: /var/data/example/routing/v2.yml
     prefix: /v2
 ```
 
