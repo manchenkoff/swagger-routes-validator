@@ -18,6 +18,10 @@ def get_yaml_routes(data: dict, prefix: str = '') -> List[str]:
     path_list = []
 
     for item, config in data.items():
+        if not config.get('methods'):
+            path_list.append(f"GET {prefix}{config['path']}")
+            continue
+
         for method in config['methods']:
             path_list.append(f"{method} {prefix}{config['path']}")
 
