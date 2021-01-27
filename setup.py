@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 
-from iniconfig import IniConfig
 from setuptools import find_packages, setup
 
 from src import validator
-
-packages = list(IniConfig("Pipfile").sections['packages'].keys())
 
 setup(
     name=validator.__title__,
@@ -28,7 +25,11 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Topic :: Software Development :: Libraries',
     ],
-    install_requires=packages,
+    install_requires=[
+        'openapi3-parser',
+        'pyyaml',
+        'colorama',
+    ],
     entry_points={
         'console_scripts': [
             'swagger-routes-validator=validator.__main__:run',

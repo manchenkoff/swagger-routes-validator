@@ -1,4 +1,4 @@
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 __title__ = 'validator'
 __author__ = 'Artyom Manchenkov'
 __email__ = 'artyom@manchenkoff.me'

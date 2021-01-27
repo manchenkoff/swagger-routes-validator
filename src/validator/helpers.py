@@ -8,8 +8,8 @@ def get_swagger_routes(specification: Specification) -> List[str]:
     path_list = []
 
     for path in specification.paths:
-        for method, operation in path.item.operations.items():
-            path_list.append(f"{method.name} {path.pattern}")
+        for operation in path.operations:
+            path_list.append(f"{operation.method.name} {path.url}")
 
     return path_list
 
